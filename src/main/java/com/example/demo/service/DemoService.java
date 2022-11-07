@@ -1,6 +1,6 @@
 package com.example.demo.service;
 
-import com.example.demo.domain.User;
+import com.example.demo.dto.UserDTO;
 import com.example.demo.repository.DemoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,15 +12,15 @@ public class DemoService {
     @Autowired
     private DemoRepository demoRepository;
 
-    public User save(User user) {
+    public UserDTO save(UserDTO user) {
         return demoRepository.save(user);
     }
 
-    public User findById(Long id) {
+    public UserDTO findById(Long id) {
         return demoRepository.findById(id);
     }
 
-    public List<User> findAll() {
+    public List<UserDTO> findAll() {
         return demoRepository.findAll();
     }
 }
